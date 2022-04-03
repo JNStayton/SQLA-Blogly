@@ -7,11 +7,11 @@
 <h3>Sign Up</h3>
 <form action="/users/{{user.id}}/edit" method="POST">
     <label for="first_name">First Name:</label>
-    <input type="text" name="first_name" value={{user.first_name}} required>
+    <input type="text" name="first_name" value="{{user.first_name}}" required>
     <label for="last_name">Last Name:</label>
-    <input type="text" name="last_name" value={{user.last_name}} required>
+    <input type="text" name="last_name" value="{{user.last_name}}" required>
     <label for="image_url">Profile Picture:</label>
-    <input type="url" name="image_url" value={{user.image_url}}>
+    <input type="url" name="image_url" value="{{user.image_url}}">
     <button>Save</button>
 </form>
 <a href="/users/{{user.id}}">Back to {{user.first_name}}'s Page</a>
