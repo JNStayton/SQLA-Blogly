@@ -4,16 +4,17 @@
 
 {% block content %} 
 
-<h3>Sign Up</h3>
-<form action="/users/{{user.id}}/edit" method="POST">
+<div class="container mt-3">
+<h3>Edit User Details:</h3>
+<form class="form-control" action="/users/{{user.id}}/edit" method="POST">
     <label for="first_name">First Name:</label>
-    <input type="text" name="first_name" value="{{user.first_name}}" required>
+    <input class="form-control" type="text" name="first_name" value="{{user.first_name}}" required>
     <label for="last_name">Last Name:</label>
-    <input type="text" name="last_name" value="{{user.last_name}}" required>
+    <input class="form-control" type="text" name="last_name" value="{{user.last_name}}" required>
     <label for="image_url">Profile Picture:</label>
-    <input type="url" name="image_url" value="{{user.image_url}}">
-    <button>Save</button>
+    <input class="form-control" type="url" name="image_url" value="{{user.image_url}}">
+    <button class="btn btn-success mt-3">Save</button> <a href="/users" class="btn btn-primary mt-3">Cancel</a>
 </form>
-<a href="/users/{{user.id}}">Back to {{user.first_name}}'s Page</a>
-<a href="/users">Back to All Users</a>
+
+</div>
 {% endblock %}

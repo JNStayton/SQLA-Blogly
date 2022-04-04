@@ -4,15 +4,18 @@
 
 {% block content %} 
 
+<div class="container mt-3">
 <h3>Sign Up</h3>
-<form action="/users/new" method="POST">
+<form action="/users/new" method="POST" class="form-control">
     <label for="first_name">First Name:</label>
-    <input type="text" name="first_name" placeholder="First Name" required>
+    <input class="form-control" type="text" name="first_name" placeholder="First Name" required>
     <label for="last_name">Last Name:</label>
-    <input type="text" name="last_name" placeholder="Last Name" required>
+    <input class="form-control" type="text" name="last_name" placeholder="Last Name" required>
     <label for="image_url">Profile Picture:</label>
-    <input type="url" name="image_url" placeholder="Profile Picture URL">
-    <button>Submit</button>
+    <input class="form-control" type="url" name="image_url" placeholder="Profile Picture URL">
+    <button class="btn btn-success mt-3">Submit</button>
+    <a href="/users" class="btn btn-primary mt-3">Cancel</a>
 </form>
+</div>
 
 {% endblock %}
